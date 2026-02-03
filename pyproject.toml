@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distributional_sensitivity_engine"
+version = "0.1.0"
+description = "Reference implementation of the Distributional Sensitivity Engine (DSE)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "David Hongkai Shen"}]
+dependencies = ["numpy>=1.21"]
+
+[project.urls]
+Documentation = "docs/Distributional_Sensitivity_Engine.pdf"
+
+[project.scripts]
+dse-sanity = "distributional_sensitivity_engine.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
